@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #222;
+  padding: 40px 20px;
+  transition: 0.3s;
+}
+
+.container {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.theme-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Form */
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.task-form input:focus {
+  border-color: #555;
+}
+
+.task-form button {
+  border: none;
+  background: #222;
+  color: white;
+  padding: 0 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Toolbar */
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.toolbar select {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.toolbar input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Statistics */
+
+.statistics {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Task */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 42px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-left input {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #444;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+  padding: 30px 0;
+}
+
+/* Dark mode */
+
+.app.dark {
+  background: #181818;
+  color: #eee;
+}
+
+.app.dark .container {
+  background: #252525;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+.app.dark .header {
+  border-color: #444;
+}
+
+.app.dark .task-form input,
+.app.dark .toolbar input,
+.app.dark .toolbar select {
+  background: #333;
+  color: white;
+  border-color: #555;
+}
+
+.app.dark .task-form button {
+  background: white;
+  color: #222;
+}
+
+.app.dark .task-item {
+  border-color: #444;
+}
+
+.app.dark .delete-btn,
+.app.dark .theme-btn {
+  color: #eee;
+}
+
+.app.dark .statistics {
+  color: #bbb;
+}
